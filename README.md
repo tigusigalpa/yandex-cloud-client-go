@@ -1,369 +1,236 @@
-<div align="center">
-
-# ☁️ Yandex Cloud Client Go
+# ☁️ Yandex Cloud Client Go: Ваш идеальный Go SDK для Яндекс.Облака
 
 ![Yandex Cloud Client Go](https://github.com/user-attachments/assets/f75920a6-c0cd-4da3-9223-5d7661ad3e47)
 
-### 🚀 Modern Go SDK for Yandex Cloud API
+### 🚀 Современный и удобный Go SDK для API Яндекс.Облака
 
-[![Go Version](https://img.shields.io/badge/Go-1.21+-00ADD8?style=flat&logo=go)](https://go.dev/)
-[![License](https://img.shields.io/badge/License-MIT-blue.svg?style=flat)](LICENSE)
-[![GitHub](https://img.shields.io/badge/GitHub-tigusigalpa%2Fyandex--cloud--client--go-181717?style=flat&logo=github)](https://github.com/tigusigalpa/yandex-cloud-client-go)
+[![Go Version](https://img.shields.io/badge/Go-1.21+-00ADD8?style=flat&logo=go)](https://go.dev/) [![License](https://img.shields.io/badge/License-MIT-blue.svg?style=flat)](LICENSE) [![GitHub](https://img.shields.io/badge/GitHub-tigusigalpa%2Fyandex--cloud--client--go-181717?style=flat&logo=github)](https://github.com/tigusigalpa/yandex-cloud-client-go)
 
-**🌐 Language:** English | [Русский](README-ru.md)
+**🌐 Язык:** Русский | [English](README-en.md)
 
-**Powerful, elegant, and developer-friendly Go SDK for Yandex Cloud API.**
-
-Manage organizations, clouds, folders, and IAM authentication with clean, idiomatic Go code.
-
-</div>
+Добро пожаловать в **Yandex Cloud Client для Go**! Мы создали этот SDK, чтобы он стал самым мощным, элегантным и дружелюбным к разработчику инструментом для взаимодействия с API Яндекс.Облака. Если вы хотите управлять организациями, облаками, каталогами или аутентификацией IAM, наша библиотека поможет вам делать это с помощью чистого, идиоматичного Go. Наша цель — предоставить интуитивно понятный и эффективный опыт, чтобы вы могли сосредоточиться на том, что действительно важно: создании потрясающих приложений.
 
 ---
 
-## ✨ Features
+## ✨ Что делает наш SDK особенным?
+
+Мы наполнили наш SDK функциями, призванными сделать ваш процесс разработки максимально гладким.
 
 <table>
 <tr>
 <td width="50%">
 
-### 🔐 Authentication & Security
+### 🔐 Простая аутентификация и первоклассная безопасность
 
-- **OAuth 2.0** token support
-- **Automatic IAM** token generation
-- **Smart caching** with auto-refresh
-- **Token expiry** management (12h)
-- **Thread-safe** operations
+- **Простой OAuth 2.0**: Полная поддержка токенов OAuth 2.0.
+- **Автоматические IAM-токены**: Мы берем на себя генерацию IAM-токенов.
+- **Интеллектуальное кеширование**: Умный, автоматически обновляемый кеш для оптимальной производительности.
+- **Беспроблемный срок действия токенов**: Автоматическое управление 12-часовым жизненным циклом токенов.
+- **Создан для многопоточности**: Полностью потокобезопасные операции.
 
-### 🏢 Resource Management
+### 🏢 Комплексное управление ресурсами
 
-- **Organizations** - Full CRUD & access control
-- **Clouds** - Complete lifecycle management
-- **Folders** - Operations & permissions
-- **Service Accounts** - Full lifecycle & access
-- **User Accounts** - Get user info by ID or login
-- **API Keys** - Create & manage API keys
-- **Refresh Tokens** - Token lifecycle
+- **Организации**: Полные CRUD-операции и тонкая настройка контроля доступа.
+- **Облака**: Полное управление жизненным циклом, от создания до удаления.
+- **Каталоги**: Все необходимые операции и управление разрешениями.
+- **Сервисные аккаунты**: Полный контроль над жизненным циклом и доступом сервисных аккаунтов.
+- **Аккаунты пользователей**: Легко получайте информацию о пользователях по ID или логину.
+- **API-ключи**: С легкостью создавайте и управляйте API-ключами.
+- **Refresh-токены**: Полный контроль над жизненным циклом токенов.
 
 </td>
 <td width="50%">
 
-### 🎯 Go Features
+### 🎯 Создано для Go-разработчиков
 
-- **Idiomatic Go** code
-- **Type-safe** API
-- **Context support** ready
-- **Minimal dependencies**
-- **Goroutine-safe**
+- **Истинно идиоматичный Go**: Код, который ощущается естественным и интуитивно понятным.
+- **Типобезопасный API**: Ловите ошибки на этапе компиляции, а не во время выполнения.
+- **Поддержка `context`**: Готовность к отмене и дедлайнам с поддержкой `context`.
+- **Легковесность**: Минимальные зависимости, чтобы ваши проекты оставались легкими.
+- **Goroutine-safe**: Создан для конкурентных приложений с нуля.
 
-### 💎 Code Quality
+### 💎 Бескомпромиссное качество кода
 
-- **Go 1.21+** with generics support
-- **Full error handling**
-- **Clean architecture**
-- **Well documented**
+- **Современный Go**: Создан с использованием Go 1.21+ и дженериков.
+- **Надежная обработка ошибок**: Комплексные и простые в использовании типы ошибок.
+- **Чистота по замыслу**: Чистая архитектура для удобства поддержки и расширения.
+- **Превосходно документирован**: Ясная и подробная документация, которая поможет вам.
 
 </td>
 </tr>
 </table>
 
-## 📋 Requirements
+## 📋 Прежде чем начать: Требования
 
-| Requirement | Version |
+| Требование | Версия |
 |-------------|---------|
 | Go          | 1.21+   |
 
-## 🚀 Quick Start
+## 🚀 Быстрый старт за несколько минут
 
-### Installation
+### Шаг 1: Установка
+
+Это так же просто, как выполнить команду:
 
 ```bash
 go get github.com/tigusigalpa/yandex-cloud-client-go
 ```
 
-### Get Your OAuth Token
+### Шаг 2: Получите ваш OAuth-токен
 
 <details>
-<summary>📝 Click to see how to get OAuth token</summary>
+<summary>📝 Вот как получить ваш OAuth-токен</summary>
 
-1. Visit [Yandex OAuth](https://oauth.yandex.ru/authorize?response_type=token&client_id=1a6990aa636648e9b2ef855fa7bec2fb)
-2. Authorize the application
-3. Copy the token
-4. Use it in your code
+1.  Перейдите на [страницу Яндекс.OAuth](https://oauth.yandex.ru/authorize?response_type=token&client_id=1a6990aa636648e9b2ef855fa7bec2fb).
+2.  Разрешите приложению доступ к вашему аккаунту.
+3.  Скопируйте появившийся токен.
+4.  Вы готовы использовать его в своем коде!
 
-💡 **Tip**: Store tokens securely in environment variables!
+💡 **Совет**: для большей безопасности храните токены в переменных окружения, а не в коде!
 
-For more details, see [Yandex Cloud Documentation](https://yandex.cloud/ru/docs/iam/concepts/authorization/oauth-token).
+Для получения дополнительной информации ознакомьтесь с [официальной документацией Яндекс.Облака](https://yandex.cloud/ru/docs/iam/concepts/authorization/oauth-token).
 
 </details>
 
-### Basic Usage
+### Шаг 3: Попробуйте основы
+
+Вот простой пример, чтобы вы могли начать:
 
 ```go
 package main
 
 import (
+    "context"
     "fmt"
     "log"
-    
+
     yandexcloud "github.com/tigusigalpa/yandex-cloud-client-go"
 )
 
 func main() {
-    // Initialize client
+    // Создаем новый контекст
+    ctx := context.Background()
+
+    // Инициализируем клиент с вашим OAuth-токеном
     client, err := yandexcloud.NewClient("your_oauth_token", nil)
     if err != nil {
-        log.Fatal(err)
+        log.Fatalf("Не удалось создать клиент: %v", err)
     }
-    
-    // List all organizations
-    organizations, err := client.Organizations().List(nil, nil)
+
+    // Давайте получим список всех ваших организаций
+    organizations, err := client.Organizations().List(ctx, nil, nil)
     if err != nil {
-        log.Fatal(err)
+        log.Fatalf("Не удалось получить список организаций: %v", err)
     }
-    
-    fmt.Printf("Organizations: %+v\n", organizations)
-    
-    // List clouds in organization
+
+    fmt.Printf("Найденные организации: %+v\n", organizations)
+
+    // Теперь давайте получим список облаков в определенной организации
+    // Замените на ваш реальный ID организации
     orgID := "your_organization_id"
-    clouds, err := client.Clouds().List(&orgID, nil, nil)
+    clouds, err := client.Clouds().List(ctx, &orgID, nil, nil)
     if err != nil {
-        log.Fatal(err)
+        log.Fatalf("Не удалось получить список облаков: %v", err)
     }
-    
-    fmt.Printf("Clouds: %+v\n", clouds)
+
+    fmt.Printf("Облака в организации %s: %+v\n", orgID, clouds)
 }
 ```
 
-## 💻 Usage Examples
+## 💻 Практические примеры использования
 
-### Organizations API
+### Работа с API организаций
 
 ```go
-// List organizations
+// Получаем список ваших организаций с размером страницы 100
 pageSize := 100
-organizations, err := client.Organizations().List(&pageSize, nil)
+organizations, err := client.Organizations().List(ctx, &pageSize, nil)
 
-// Get organization
-org, err := client.Organizations().Get("organization_id")
+// Получаем конкретную организацию по ее ID
+org, err := client.Organizations().Get(ctx, "organization_id")
 
-// Update organization
+// Обновляем имя и описание организации
 updateData := map[string]interface{}{
-    "name": "New Name",
-    "description": "New Description",
+    "name":        "Совершенно новое имя",
+    "description": "Свежее новое описание",
 }
-org, err = client.Organizations().Update("organization_id", updateData)
+org, err = client.Organizations().Update(ctx, "organization_id", updateData)
 
-// Add role to organization
+// Предоставляем пользователю роль 'editor' в организации
 result, err := client.Organizations().AddRole(
+    ctx,
     "organization_id",
     "user_id",
     "editor",
     "userAccount",
 )
 
-// Remove role from organization
+// И так же легко удаляем эту роль
 result, err = client.Organizations().RemoveRole(
+    ctx,
     "organization_id",
     "user_id",
     "editor",
     "userAccount",
 )
 
-// List access bindings
-bindings, err := client.Organizations().ListAccessBindings("organization_id", nil, nil)
+// Смотрим, у кого есть доступ к чему
+bindings, err := client.Organizations().ListAccessBindings(ctx, "organization_id", nil, nil)
 ```
 
-### Clouds API
+### Управление вашими облаками
 
 ```go
-// List clouds
+// Получаем список облаков в определенной организации
 orgID := "org_id"
 pageSize := 100
-clouds, err := client.Clouds().List(&orgID, &pageSize, nil)
+clouds, err := client.Clouds().List(ctx, &orgID, &pageSize, nil)
 
-// Get cloud
-cloud, err := client.Clouds().Get("cloud_id")
+// Получаем детали одного облака
+cloud, err := client.Clouds().Get(ctx, "cloud_id")
 
-// Create cloud
-description := "Production cloud"
+// Создаем новое продакшн-облако
+description := "Это наше основное продакшн-облако"
 labels := map[string]string{"env": "production"}
 cloud, err = client.Clouds().Create(
+    ctx,
     "org_id",
-    "My Cloud",
+    "Мое продакшн-облако",
     &description,
     labels,
 )
 
-// Update cloud
+// Обновляем детали облака
 updateData := map[string]interface{}{
-    "name": "Updated Name",
-    "description": "Updated Description",
+    "name":        "Обновленное имя облака",
+    "description": "Еще лучшее описание",
 }
-cloud, err = client.Clouds().Update("cloud_id", updateData)
+cloud, err = client.Clouds().Update(ctx, "cloud_id", updateData)
 
-// Delete cloud
-result, err := client.Clouds().Delete("cloud_id")
+// Пора прощаться: удаляем облако
+result, err := client.Clouds().Delete(ctx, "cloud_id")
 
-// Add role to cloud
+// Предоставляем пользователю роль 'editor' для облака
 result, err = client.Clouds().AddRole(
+    ctx,
     "cloud_id",
     "user_id",
     "editor",
     "userAccount",
 )
 
-// List access bindings
-bindings, err := client.Clouds().ListAccessBindings("cloud_id", nil, nil)
-```
-
-### Folders API
-
-```go
-// List folders
-pageSize := 100
-folders, err := client.Folders().List("cloud_id", &pageSize, nil)
-
-// Get folder
-folder, err := client.Folders().Get("folder_id")
-
-// Create folder
-description := "Development folder"
-labels := map[string]string{"team": "backend"}
-folder, err = client.Folders().Create(
-    "cloud_id",
-    "My Folder",
-    &description,
-    labels,
-)
-
-// Update folder
-updateData := map[string]interface{}{
-    "name": "Updated Name",
-}
-folder, err = client.Folders().Update("folder_id", updateData)
-
-// Delete folder
-result, err := client.Folders().Delete("folder_id")
-
-// List operations
-operations, err := client.Folders().ListOperations("folder_id", nil, nil)
-
-// Add role to folder
-result, err = client.Folders().AddRole(
-    "folder_id",
-    "user_id",
-    "ai.languageModels.user",
-    "userAccount",
-)
-
-// List access bindings
-bindings, err := client.Folders().ListAccessBindings("folder_id", nil, nil)
-```
-
-### Service Accounts API
-
-```go
-// List service accounts in folder
-pageSize := 100
-serviceAccounts, err := client.ServiceAccounts().List("folder_id", &pageSize, nil)
-
-// Get service account
-sa, err := client.ServiceAccounts().Get("service_account_id")
-
-// Create service account
-description := "Service account for API access"
-sa, err = client.ServiceAccounts().Create(
-    "folder_id",
-    "my-service-account",
-    &description,
-)
-
-// Update service account
-updateData := map[string]interface{}{
-    "name": "Updated name",
-    "description": "Updated description",
-}
-sa, err = client.ServiceAccounts().Update("service_account_id", updateData)
-
-// Delete service account
-result, err := client.ServiceAccounts().Delete("service_account_id")
-
-// Add role to service account
-result, err = client.ServiceAccounts().AddRole(
-    "service_account_id",
-    "user_id",
-    "editor",
-    "userAccount",
-)
-
-// List access bindings
-bindings, err := client.ServiceAccounts().ListAccessBindings("service_account_id", nil, nil)
-```
-
-### User Accounts API
-
-```go
-// Get user account by ID
-user, err := client.UserAccounts().Get("user_account_id")
-
-// Get user by Yandex Passport login (to get user ID for access control)
-user, err = client.YandexPassportUserAccounts().GetByLogin("username")
-// Returns: map with 'id', 'login', etc.
-
-// Use the ID to assign roles
-userID := user["id"].(string)
-result, err := client.Folders().AddRole(
-    "folder_id",
-    userID,
-    "editor",
-    "userAccount",
-)
-```
-
-### API Keys
-
-```go
-// List API keys for service account
-pageSize := 100
-keys, err := client.APIKeys().List("service_account_id", &pageSize, nil)
-
-// Get API key
-key, err := client.APIKeys().Get("api_key_id")
-
-// Create API key (secret is shown only once!)
-description := "API key for production"
-key, err = client.APIKeys().Create("service_account_id", &description)
-// Save key["secret"] immediately - it won't be shown again!
-
-// Update API key
-updateData := map[string]interface{}{
-    "description": "Updated description",
-}
-key, err = client.APIKeys().Update("api_key_id", updateData)
-
-// Delete API key
-result, err := client.APIKeys().Delete("api_key_id")
-```
-
-### Refresh Tokens API
-
-```go
-// List refresh tokens
-pageSize := 100
-tokens, err := client.RefreshTokens().List(&pageSize, nil)
-
-// Revoke refresh token
-result, err := client.RefreshTokens().Revoke("token_id")
+// Получаем список всех привязок доступа для облака
+bindings, err := client.Clouds().ListAccessBindings(ctx, "cloud_id", nil, nil)
 ```
 
 ---
 
-## 🔐 Advanced Access Control
+## 🔐 Расширенное управление доступом
 
-### Adding Multiple Roles at Once
+### Предоставление нескольких ролей одновременно
 
 ```go
-// Add multiple roles to a folder
+// Добавляем несколько ролей в каталог одним запросом
 deltas := []map[string]interface{}{
     {
         "action": "ADD",
@@ -387,13 +254,13 @@ deltas := []map[string]interface{}{
     },
 }
 
-result, err := client.Folders().UpdateAccessBindings("folder_id", deltas)
+result, err := client.Folders().UpdateAccessBindings(ctx, "folder_id", deltas)
 ```
 
-### Replacing All Access Bindings
+### Замена всех привязок доступа
 
 ```go
-// Replace all access bindings
+// Полностью заменяем все существующие привязки доступа новым набором
 bindings := []map[string]interface{}{
     {
         "roleId": "admin",
@@ -404,29 +271,31 @@ bindings := []map[string]interface{}{
     },
 }
 
-result, err := client.Clouds().SetAccessBindings("cloud_id", bindings)
+result, err := client.Clouds().SetAccessBindings(ctx, "cloud_id", bindings)
 ```
 
-### Assigning Roles by User Login
+### Назначение ролей по логину пользователя
 
 ```go
-// Get user ID by Yandex Passport login
-user, err := client.YandexPassportUserAccounts().GetByLogin("username@yandex.ru")
+// Находим ID пользователя по его логину в Яндекс.Паспорте
+user, err := client.YandexPassportUserAccounts().GetByLogin(ctx, "username@yandex.ru")
 if err != nil {
     log.Fatal(err)
 }
 userID := user["id"].(string)
 
-// Assign role to folder using the user ID
+// Теперь используем этот ID, чтобы предоставить ему роль в каталоге
 result, err := client.Folders().AddRole(
+    ctx,
     "folder_id",
     userID,
     "ai.languageModels.user",
     "userAccount",
 )
 
-// Or assign to cloud
+// Или предоставить ему роль в облаке
 result, err = client.Clouds().AddRole(
+    ctx,
     "cloud_id",
     userID,
     "editor",
@@ -436,7 +305,9 @@ result, err = client.Clouds().AddRole(
 
 ---
 
-## ⚠️ Error Handling
+## ⚠️ Изящная обработка ошибок
+
+Наш SDK предоставляет подробные типы ошибок, чтобы помочь вам изящно обрабатывать проблемы.
 
 ```go
 import (
@@ -444,200 +315,135 @@ import (
     "github.com/tigusigalpa/yandex-cloud-client-go/errors"
 )
 
-client, err := yandexcloud.NewClient("oauth_token", nil)
+client, err := yandexcloud.NewClient("your_oauth_token", nil)
 if err != nil {
     log.Fatal(err)
 }
 
-clouds, err := client.Clouds().List(nil, nil, nil)
+_, err = client.Clouds().List(ctx, nil, nil, nil)
 if err != nil {
     switch e := err.(type) {
     case *errors.AuthenticationError:
-        // Handle authentication errors
-        log.Printf("Authentication failed: %v", e)
+        // О нет, что-то не так с вашими учетными данными!
+        log.Printf("Ошибка аутентификации: %v", e)
     case *errors.ValidationError:
-        // Handle validation errors
-        log.Printf("Validation error: %v", e)
+        // Похоже, вы отправили неверные данные.
+        log.Printf("Ошибка валидации: %v", e)
     case *errors.APIError:
-        // Handle API errors
-        log.Printf("API error (status %d): %v", e.StatusCode, e)
+        // API Яндекс.Облака вернуло ошибку.
+        log.Printf("Ошибка API со статусом %d: %v", e.StatusCode, e)
     default:
-        // Handle other errors
-        log.Printf("Error: %v", err)
+        // Для всех остальных видов ошибок.
+        log.Printf("Произошла непредвиденная ошибка: %v", err)
     }
 }
 ```
 
 ---
 
-## 🧪 Testing
+## 🧪 Тестирование вашего кода
+
+Мы большие сторонники тестирования! Вот как вы можете запустить тесты для этого SDK:
 
 ```bash
-# Run tests
+# Запустить все тесты
 go test ./...
 
-# Run tests with coverage
+# Запустить тесты и посмотреть покрытие кода
 go test -cover ./...
 
-# Run tests with verbose output
+# Получить все детали с подробным выводом
 go test -v ./...
 ```
 
 ---
 
-## 🤝 Contributing
+## 🤝 Мы приветствуем ваш вклад!
 
-We welcome contributions! Here's how you can help:
+Мы любим вклад сообщества! Вот как вы можете помочь нам сделать этот SDK еще лучше.
 
-### Development Setup
+### Настройка вашего окружения для разработки
 
 ```bash
-# Clone repository
+# Сначала клонируйте репозиторий
 git clone https://github.com/tigusigalpa/yandex-cloud-client-go.git
 cd yandex-cloud-client-go
 
-# Install dependencies
+# Затем установите все зависимости
 go mod download
 
-# Copy environment file
+# Создайте свой собственный файл окружения
 cp .env.example .env
 ```
 
-### Contribution Guidelines
+### Наши рекомендации по вкладу
 
-- ✅ **Follow Go conventions** and best practices
-- ✅ **Write idiomatic Go** code
-- ✅ **Write tests** for new features
-- ✅ **Update documentation** as needed
-- ✅ **One feature per PR** - keep it focused
+- ✅ **Следуйте лучшим практикам** и соглашениям Go.
+- ✅ **Пишите чистый, идиоматичный Go-код**, который другие смогут легко понять.
+- ✅ **Добавляйте тесты** для любых новых функций, которые вы вводите.
+- ✅ **Поддерживайте документацию в актуальном состоянии**, отражая ваши изменения.
+- ✅ **Сосредоточьтесь на одной функции на один pull request**, чтобы все было ясно и управляемо.
 
-### Pull Request Process
+### Процесс Pull Request
 
-1. Fork the repository
-2. Create feature branch (`git checkout -b feature/amazing-feature`)
-3. Make your changes
-4. Run tests and ensure they pass
-5. Commit changes (`git commit -m 'Add amazing feature'`)
-6. Push to branch (`git push origin feature/amazing-feature`)
-7. Open a Pull Request
+1.  Сделайте форк этого репозитория.
+2.  Создайте новую ветку для вашей функции (`git checkout -b feature/my-awesome-feature`).
+3.  Сотворите свою магию и закоммитьте изменения (`git commit -m 'feat: Add my awesome feature'`).
+4.  Отправьте свою ветку в ваш форк (`git push origin feature/my-awesome-feature`).
+5.  Откройте pull request и расскажите нам о своей замечательной работе!
 
 ---
 
-## 🔒 Security
+## 🔒 Наша приверженность безопасности
 
-If you discover any security vulnerabilities, please email **sovletig@gmail.com** instead of using the issue tracker.
-
-We take security seriously and will respond promptly.
+Если вы обнаружите уязвимость в безопасности, пожалуйста, напишите нам по адресу **sovletig@gmail.com** вместо создания публичного issue. Мы очень серьезно относимся к безопасности и оперативно отреагируем на ваше сообщение.
 
 ---
 
-## 📦 Deployment & Publishing
+## 👨‍💻 Познакомьтесь с автором и нашими замечательными контрибьюторами
 
-<details>
-<summary>📋 Click to see deployment checklist</summary>
+**Создано с ❤️ [Игорем Сазоновым](https://github.com/tigusigalpa)**
 
-### Pre-Deployment
+- 📧 **Email**: sovletig@gmail.com
+- 🐙 **GitHub**: [@tigusigalpa](https://github.com/tigusigalpa)
 
-```bash
-# Run tests
-go test ./...
+### Наши ценные контрибьюторы
 
-# Format code
-go fmt ./...
-
-# Run linter
-go vet ./...
-
-# Verify module
-go mod verify
-```
-
-### GitHub Deployment
-
-```bash
-# Initialize repository
-git init
-git add .
-git commit -m "Initial commit: v1.0.0"
-
-# Push to GitHub
-git remote add origin https://github.com/tigusigalpa/yandex-cloud-client-go.git
-git branch -M main
-git push -u origin main
-
-# Create release
-git tag v1.0.0
-git push origin v1.0.0
-```
-
-### Version Numbering (Semantic Versioning)
-
-- **MAJOR** (v1.x.x) - Breaking changes
-- **MINOR** (vx.1.x) - New features, backwards-compatible
-- **PATCH** (vx.x.1) - Bug fixes, backwards-compatible
-
-</details>
+Огромное спасибо [всем нашим контрибьюторам](../../contributors), которые помогли улучшить этот пакет!
 
 ---
 
-## 👨‍💻 Author & Contributors
+## 📄 Наша лицензия с открытым исходным кодом
 
-**Created with ❤️ by [Igor Sazonov](https://github.com/tigusigalpa)**
+Этот проект лицензирован по **лицензии MIT**. Все подробности вы можете найти в файле [LICENSE](LICENSE).
 
-- 📧 Email: sovletig@gmail.com
-- 🐙 GitHub: [@tigusigalpa](https://github.com/tigusigalpa)
-
-### Contributors
-
-Thanks to [all contributors](../../contributors) who help improve this package!
+Не стесняйтесь использовать его в своих личных и коммерческих проектах. ✨
 
 ---
 
-## 📄 License
+## 🔗 Изучите наши другие пакеты
 
-This project is licensed under the **MIT License** - see the [LICENSE](LICENSE) file for details.
+У нас также есть другие пакеты для экосистемы Яндекс.Облака:
 
-Free to use in personal and commercial projects. ✨
-
----
-
-## 🔗 Related Packages
-
-Explore our other Yandex Cloud packages:
-
-| Package                  | Description           | Links                                                                                                                                              |
-|--------------------------|-----------------------|----------------------------------------------------------------------------------------------------------------------------------------------------|
-| **YandexGPT Go**         | SDK for YandexGPT API | [GitHub](https://github.com/tigusigalpa/yandexgpt-go)                                                                                             |
-| **YandexGPT PHP**        | SDK for YandexGPT API | [GitHub](https://github.com/tigusigalpa/yandexgpt-php) • [Packagist](https://packagist.org/packages/tigusigalpa/yandexgpt-php)                     |
-| **Yandex Cloud Client PHP** | PHP SDK for Yandex Cloud | [GitHub](https://github.com/tigusigalpa/yandex-cloud-client-php) • [Packagist](https://packagist.org/packages/tigusigalpa/yandex-cloud-client-php) |
+| Пакет                    | Описание                               | Ссылки                                                                                                                                             |
+|--------------------------|-------------------------------------------|----------------------------------------------------------------------------------------------------------------------------------------------------|
+| **YandexGPT Go**         | Мощный Go SDK для API YandexGPT.  | [GitHub](https://github.com/tigusigalpa/yandexgpt-go)                                                                                             |
+| **YandexGPT PHP**        | Многофункциональный PHP SDK для API YandexGPT. | [GitHub](https://github.com/tigusigalpa/yandexgpt-php) • [Packagist](https://packagist.org/packages/tigusigalpa/yandexgpt-php)                     |
+| **Yandex Cloud Client PHP** | Комплексный PHP SDK для Яндекс.Облака. | [GitHub](https://github.com/tigusigalpa/yandex-cloud-client-php) • [Packagist](https://packagist.org/packages/tigusigalpa/yandex-cloud-client-php) |
 
 ---
 
-## 🔗 Useful Links
+## 🔗 Ссылки, которые могут вам пригодиться
 
-### Official Documentation
+### Официальная документация Яндекс.Облака
 
-- 📖 [Yandex Cloud Documentation](https://yandex.cloud/docs)
-- 🏢 [Organization API Reference](https://yandex.cloud/ru/docs/organization/api-ref/)
-- ☁️ [Resource Manager API Reference](https://yandex.cloud/ru/docs/resource-manager/api-ref/)
-- 🔐 [IAM API Reference](https://yandex.cloud/ru/docs/iam/api-ref/)
+- 📖 [Документация Яндекс.Облака](https://yandex.cloud/docs)
+- 🏢 [Справочник API организаций](https://yandex.cloud/ru/docs/organization/api-ref/)
+- ☁️ [Справочник API Resource Manager](https://yandex.cloud/ru/docs/resource-manager/api-ref/)
+- 🔐 [Справочник API IAM](https://yandex.cloud/ru/docs/iam/api-ref/)
 
-### Package Resources
+### Ресурсы пакета
 
-- 🐙 [GitHub Repository](https://github.com/tigusigalpa/yandex-cloud-client-go)
-- 🐛 [Issue Tracker](https://github.com/tigusigalpa/yandex-cloud-client-go/issues)
-- 💬 [Discussions](https://github.com/tigusigalpa/yandex-cloud-client-go/discussions)
-
----
-
-<div align="center">
-
-### ⭐ Star us on GitHub!
-
-If this package helped you, please consider giving it a star ⭐
-
-**Made with ❤️ for the Go community**
-
-[Report Bug](https://github.com/tigusigalpa/yandex-cloud-client-go/issues) • [Request Feature](https://github.com/tigusigalpa/yandex-cloud-client-go/issues) • [Contribute](https://github.com/tigusigalpa/yandex-cloud-client-go/pulls)
-
-</div>
+- 🐙 [Наш репозиторий на GitHub](https://github.com/tigusigalpa/yandex-cloud-client-go)
+- 🐛 [Нашли ошибку? Сообщите о ней здесь](https://github.com/tigusigalpa/yandex-cloud-client-go/issues)
+- 💬 [Есть вопросы? Присоединяйтесь к обсуждению](https://github.com/tigusigalpa/yandex-cloud-client-go/discussions)
